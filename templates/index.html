@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Classificador de Frutas</title>
+</head>
+<body>
+    <h1>Classificação de Frutas com KNN</h1>
+    <form action="/prever" method="post">
+        <label for="peso">Peso (g):</label><br>
+        <input type="number" step="0.01" name="peso" required><br><br>
+
+        <label for="diametro">Diâmetro (cm):</label><br>
+        <input type="number" step="0.01" name="diametro" required><br><br>
+
+        <input type="submit" value="Prever">
+    </form>
+
+    {% if resultado %}
+        <h2>{{ resultado }}</h2>
+    {% endif %}
+</body>
+</html>
